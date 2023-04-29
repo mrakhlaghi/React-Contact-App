@@ -1,0 +1,43 @@
+.editForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 13px;
+    color: rgb(108 68 170);
+}
+
+.formControl{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;    
+}
+.formControl input{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(108 68 170);
+    color: rgb(108 68 170);
+    padding: 3px 5px;
+
+}
+
+.formControl input:focus{
+    border: 2px solid #7c3aed;
+}
+form button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #7c3aed;
+    border-radius:5px ;
+}
+@media  screen and (min-width: 640px) {
+    .formControl input{
+        width: 300px;
+    }
+
+}

@@ -1,0 +1,40 @@
+.contactDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(248 248 248 / 29%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    color: #4338ca;
+    border-radius: 5px; 
+    width: 250px;
+    height: 260px;
+}
+.contactDetail_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+.contactDetail-section{
+    margin: 10px  30px;
+}
+.backLink{
+    transition: all 0.3s;
+}
+.backLink:hover{
+    transform: translateY(-2px);
+    font-size: 17px;
+    color: rgb(210, 108, 210);
+}
+@media  screen and (min-width: 640px) {
+    .contactDetail{
+        width: 400px;
+    }
+
+}

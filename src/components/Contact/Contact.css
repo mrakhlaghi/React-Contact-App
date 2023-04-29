@@ -1,0 +1,83 @@
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(248 248 248 / 57%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 5px;  
+    padding: 0 20px;    
+    cursor: pointer;
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: all 0.3s;
+}
+.item:hover{
+    transform: translateY(-2px);
+}
+.item button{
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #Dc2626;
+    color: #Dc2626;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+.item fa-user{
+    width: 20px;
+    height:20px ;
+    
+}
+.item_container{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.contact-text{
+    margin-left: 10px;  
+}
+.contact-text p{
+    width: 190px;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+
+ .editBtn,.deleteBtn{
+    /* margin-right: 1rem; */
+    color: #6d28d9;
+
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+.editBtn i{
+    font-size: 20px;
+    color: #9479bfeb;
+    cursor: pointer; 
+}
+.deleteBtn i{
+    font-size: 20px;
+    color: #e178a6cc;
+    cursor: pointer; 
+    margin-left: 5px;
+}
+@media  screen and (min-width: 640px) {
+ 
+    .item{
+    width: 400px;
+    }
+    .contact-text p{
+        width: 220px;
+        font-size: 15px;
+    }
+}
