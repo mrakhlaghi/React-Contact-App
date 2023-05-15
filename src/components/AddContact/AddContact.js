@@ -3,16 +3,15 @@ import { useNavigate } from "react-router-dom";
 import "./AddContact.css";
 import addContact from "../../services/addContactService";
 const AddContact = (props) => {
-  const [contact, setContact] = useState({ name: "", email: "" });
+  const [contact, setContact] = useState({ id: null, name: "", email: "" });
   const navigate = useNavigate();
   const InputRef = useRef();
 
-
-  useEffect(()=>{
+  useEffect(() => {
     InputRef.current.focus();
-  },[])
+  }, []);
   const changeHandler = (e) => {
-    setContact({ ...contact, [e.target.name]: e.target.value });
+    setContact({ ...contact, id: Date.now(), [e.target.name]: e.target.value });
   };
 
   const formSubmit = async (e) => {
@@ -24,7 +23,7 @@ const AddContact = (props) => {
     try {
       // setContacts([...contacts, { id: new Date().getTime(), ...contact }]);
       await addContact(contact);
-      setContact({ name: "", email: "" });
+      setContact({ id: null, name: "", email: "" });
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -32,7 +31,7 @@ const AddContact = (props) => {
   };
   return (
     <>
-      <form  onSubmit={formSubmit}>
+      <form onSubmit={formSubmit}>
         <div className="formControl">
           <label>name</label>
           <input

@@ -1,6 +1,6 @@
 .App {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,7 +21,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 19px 19px 30px 19px  ;
   width: 330px;
-  min-height: 400px;
+  min-height: 400px; 
   
 }
 

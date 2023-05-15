@@ -5,30 +5,30 @@ import ContactList from "./components/ContactList/ContactList";
 import { Route, Routes } from "react-router-dom";
 import ContactDetail from "./components/ContactDetail/ContactDetail";
 import EditContact from "./components/EditContact/EditContact";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
     <main className="App">
       <div className="container">
+        <h1 className="header"> Contact App</h1>
 
-      <h1 className="header" > Contact App</h1>
+        <Routes>
+          <Route path="/" element={<ContactList />} />
+          <Route path="/add" element={<AddContact />} />
+          <Route path="/contact/:id" element={<ContactDetail />} />
+          <Route path="/edit/:id" element={<EditContact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
 
-      <Routes>
-        <Route path="/" element={<ContactList />} />
-        <Route path="/add" element={<AddContact />} />
-        <Route path="/contact/:id" element={<ContactDetail />} />
-        <Route path="/edit/:id" element={<EditContact />} />
-      </Routes>
-
-      {/* <AddContact addContactHandler={addContactHandler}/>
+        {/* <AddContact addContactHandler={addContactHandler}/>
       <ContactList contacts={contacts} onDelete={deleteContactHandler}/> */}
 
-      {/* <Routes>
+        {/* <Routes>
     {routes.map((routes)=>{
       <Route {...routes}/>
     })}
     </Routes> */}
-
       </div>
     </main>
   );

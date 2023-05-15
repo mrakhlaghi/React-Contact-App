@@ -4,6 +4,7 @@ import "./ContactList.css";
 import { Link } from "react-router-dom";
 import getContacts from "../../services/getContactsService";
 import deleteContact from "../../services/deleteContactService";
+import "../../mock/mock"
 
 const ContactList = (props) => {
   const [contacts, setContacts] = useState(null);
@@ -14,8 +15,9 @@ const ContactList = (props) => {
   useEffect(() => {
     const fetchContacts = async () => {
       const { data } = await getContacts();
-      setContacts(data);
-      setAllContacts(data);
+      // console.log(data.database);
+      setContacts(data.database);
+      setAllContacts(data.database);
       searchInputRef.current.focus();
       // console.log(searchInputRef.current.focus());
     };
@@ -43,9 +45,9 @@ const ContactList = (props) => {
   };
   const deleteContactHandler = async (id) => {
     try {
+      await deleteContact(id);
       const filteredContacts = contacts.filter((c) => c.id !== id);
       setContacts(filteredContacts);
-      await deleteContact(id);
     } catch (error) {
       console.log(error);
     }
