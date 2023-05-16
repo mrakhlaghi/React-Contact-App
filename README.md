@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-# Live and Deployed version [here](https://646204ea5635780b8dd533c3--lucky-flan-aaa4fe.netlify.app/)
+# Live and Deployed version [here](https://mr-akhlaghi-react-todolist-app.netlify.app/)
 
 ![Contact List Preview](https://github.com/mrakhlaghi/React-ContactList-App/assets/103969331/5945d617-3497-4206-a4e2-47610c5f697f)
 
